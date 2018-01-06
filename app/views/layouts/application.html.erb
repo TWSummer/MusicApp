@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="<%= bands_url %>">Home</a>
+      </div>
+      <% if current_user %>
+      <div>
+        <form class="" action="<%= session_url %>" method="post">
+          <%= authenticate %>
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Log Out">
+        </form>
+      </div>
+      <% else %>
+        <div class="flex-signup">
+          <a href="<%= new_user_url %>">Sign Up</a>
+          <p> or </p>
+          <a href="<%= new_session_url %>">Log In</a>
+        </div>
+      <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>

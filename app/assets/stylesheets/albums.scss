@@ -1,0 +1,15 @@
+// Place all the styles related to the Albums controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.radio-select {
+  display: flex;
+  align-items: center;
+}
+
+.radio-select * {
+  margin: 8px;
+}
+
+.radio-select p {
+  margin: 0px;
+}

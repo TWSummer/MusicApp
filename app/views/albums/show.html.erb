@@ -1,0 +1,16 @@
+<h1><%= @album.title %></h1>
+<p>Year: <%= @album.year %></p>
+<p>Type: <%= @album.studio ? "Studio" : "Live" %></p>
+<p>Band: <%= @album.band.name %></p>
+<br>
+<a href="<%= new_track_url %>">Add Track</a>
+<br><br>
+<div class="flex-buttons">
+  <a href="<%= edit_album_url %>">Edit <%= @album.title %></a>
+  <a href="<%= band_url(@album.band) %>">Return to <%= @album.band.name %>'s page</a>
+  <form action="<%= album_url(@album) %>" method="post">
+    <%= authenticate %>
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete <%= @album.title %>">
+  </form>
+</div>

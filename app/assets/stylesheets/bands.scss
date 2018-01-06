@@ -1,0 +1,24 @@
+// Place all the styles related to the Bands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.band-box {
+  display: flex;
+  margin: 15px;
+}
+
+.bands-section {
+  display: flex;
+}
+
+.band-action-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-buttons {
+  display: flex;
+}
+
+.flex-buttons * {
+  margin-right: 15px;
+}
